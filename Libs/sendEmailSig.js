@@ -17,7 +17,17 @@ module.exports = SendMail = (users) => {
     to: `${users.email}`,
     subject: "Inscription Pour les JFAC 2020",
     text: users.text,
-    html: users.html
+    html: users.html,
+    attachments:[
+      {
+        filename:"La plaquette des JFAC 2020",
+        path:'./Libs/plaquette.pdf'
+      },
+      {
+        filename:"JFAC 2020 note conceptuelle",
+        path:'./Libs/tdr.doc'
+      }
+    ]
   }
   AccounterSender.sendMail(option,function(error,info){
     if(error){
