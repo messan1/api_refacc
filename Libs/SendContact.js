@@ -27,7 +27,7 @@ const AccounterSender = nodemailer.createTransport({
 
   const option = {
     from: 'REFACC.COM formulaire de contact <infinitycenter@zoho.com>',
-    to: `messanchristian@hotmail.com`,
+    to: `climatrefacc@gmail.com,infinity.soft@aol.com`,
     subject: 'Formulaire de contact',
     text: content,
   };

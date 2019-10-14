@@ -25,7 +25,7 @@ module.exports = SendMailToRefacc = (users, type) => {
 
   const option = {
     from: 'Le site du REFACC <infinitycenter@zoho.com>',
-    to: `messanchristian@hotmail.com,infinity.soft@aol.com`,
+    to: `climatrefacc@gmail.com,infinity.soft@aol.com`,
     subject: 'Les Inscription Pour les JFAC 2020',
     text: content,
     html: html,
