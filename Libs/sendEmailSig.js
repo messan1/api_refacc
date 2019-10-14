@@ -1,16 +1,19 @@
 const nodemailer = require("nodemailer")
 
 module.exports = SendMail = (users) => {
-  const AccounterSender = nodemailer.createTransport({
-    service:"Gmail",
-    auth:{
-      user:"johnbambino379@gmail.com",
-      pass:"48069804"
-    }
-  })
 
+  const AccounterSender = nodemailer.createTransport({
+    host: 'smtp.zoho.com',
+    port: 465,
+    secure: true, // use SSL
+    auth: {
+        user: "infinitycenter@zoho.com",
+        pass: "20102011Naruto"
+    }
+  });
+  
   const option = {
-    from:"Le REFACC <climatrefacc@gmail.com>",
+    from:"Le REFACC <infinitycenter@zoho.com>",
     to: `${users.email}`,
     subject: "Inscription Pour les JFAC 2020",
     text: users.text,

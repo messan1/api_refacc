@@ -1,13 +1,18 @@
 const nodemailer = require ('nodemailer');
 
 module.exports = SendMailToRefaccContact = (infosign) => {
-  const AccounterSender = nodemailer.createTransport ({
-    service: 'Gmail',
-    auth: {
-      user: 'johnbambino379@gmail.com',
-      pass: '48069804',
-    },
-  });
+
+
+const AccounterSender = nodemailer.createTransport({
+  host: 'smtp.zoho.com',
+  port: 465,
+  secure: true, // use SSL
+  auth: {
+      user: "infinitycenter@zoho.com",
+      pass: "20102011Naruto"
+  }
+});
+
 
   var content = '';
   for (const [key, value] of Object.entries (infosign)) {
@@ -21,11 +26,10 @@ module.exports = SendMailToRefaccContact = (infosign) => {
   `;
 
   const option = {
-    from: 'Le site du REFACC (Nous contacter) <infinitytodev@gmail.com>',
-    to: `messanchristian@hotmail.com,infinity.soft@aol.com`,
+    from: 'REFACC.COM formulaire de contact <infinitycenter@zoho.com>',
+    to: `messanchristian@hotmail.com`,
     subject: 'Formulaire de contact',
     text: content,
-    html: html,
   };
   AccounterSender.sendMail (option, function (error, info) {
     if (error) {

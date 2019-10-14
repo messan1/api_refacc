@@ -1,13 +1,16 @@
 const nodemailer = require ('nodemailer');
 
 module.exports = SendMailToRefacc = (users, type) => {
-  const AccounterSender = nodemailer.createTransport ({
-    service: 'Gmail',
+  const AccounterSender = nodemailer.createTransport({
+    host: 'smtp.zoho.com',
+    port: 465,
+    secure: true, // use SSL
     auth: {
-      user: 'johnbambino379@gmail.com',
-      pass: '48069804',
-    },
+        user: "infinitycenter@zoho.com",
+        pass: "20102011Naruto"
+    }
   });
+  
 
   var content = '';
   for (const [key, value] of Object.entries (users)) {
@@ -21,7 +24,7 @@ module.exports = SendMailToRefacc = (users, type) => {
   `;
 
   const option = {
-    from: 'Le site du REFACC <infinitytodev@gmail.com>',
+    from: 'Le site du REFACC <infinitycenter@zoho.com>',
     to: `messanchristian@hotmail.com,infinity.soft@aol.com`,
     subject: 'Les Inscription Pour les JFAC 2020',
     text: content,
