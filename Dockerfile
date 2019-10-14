@@ -1,4 +1,4 @@
-FROM node:carbon
+FROM node:10-alpine
 
 RUN mkdir -p /usr/src/refacc_api
 

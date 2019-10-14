@@ -1,10 +1,15 @@
 const express = require("express");
 const Db = require("./config/DB")
+const mongoose = require('mongoose');
 const app = express()
 const JfacRoute = require("./routes/Jfac")
 const cors = require("cors")
 var https = require("https");
 app.use(cors())
+
+mongoose.connect(Db.url, {
+  useMongoClient: true
+}); 
 
 
 const PORT = process.env.PORT || 3000
