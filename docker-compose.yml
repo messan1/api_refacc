@@ -50,7 +50,7 @@ volumes:
     driver: local
     driver_opts:
       type: none
-      device: /home/api_refacc/
+      device: /home/sammy/node_project/views/
       o: bind
 
 networks:
