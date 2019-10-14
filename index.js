@@ -8,7 +8,7 @@ var https = require("https");
 app.use(cors())
 
 mongoose.connect(Db.url, {
-  useMongoClient: true
+  useNewUrlParser:true
 }); 
 
 
