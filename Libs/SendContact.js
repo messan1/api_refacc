@@ -4,8 +4,8 @@ module.exports = SendMailToRefaccContact = (infosign) => {
   const AccounterSender = nodemailer.createTransport ({
     service: 'Gmail',
     auth: {
-      user: 'infinitytodev@gmail.com',
-      pass: '20102011Naruto',
+      user: 'johnbambino379@gmail.com',
+      pass: '48069804',
     },
   });
 
