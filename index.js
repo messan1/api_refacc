@@ -12,7 +12,7 @@ mongoose.connect(Db.url, {
 }); 
 
 
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 8080
 app.use(express.json())
 app.use('/api/jfac20',JfacRoute)
 app.get("/",(req,res)=>{
