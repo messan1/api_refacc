@@ -13,6 +13,7 @@ mongoose.connect(Db.url, {
 
 
 const PORT = process.env.PORT || 8080
+const HOST = 0.0.0.0
 app.use(express.json())
 app.use('/api/jfac20',JfacRoute)
 app.get("/",(req,res)=>{
@@ -20,7 +21,7 @@ app.get("/",(req,res)=>{
 })
 
 
-app.listen(PORT,()=>{
+app.listen(PORT,HOST()=>{
   console.log("Server running");
 })
 
